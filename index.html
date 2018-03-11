@@ -6,9 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Shaun Kollannur | Awesome Dev</title>
-	<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
-		particlesJS("particle-js", "snowfall", 'assets/snowflakes.json');
-	</script>
+	 <script type="text/javascript" src="particles.js"></script>
 	<link rel="icon" href="favicon.ico" type="image/png" />
 
 	<link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300" rel="stylesheet">
@@ -36,5 +34,10 @@
 			<a target="_blank" href="https://www.linkedin.com/in/shaunkollannur"><i class="fab fa-linkedin"></i></a>
     		</div>
 	</main>
+	<script type="text/javascript">
+		particlesJS.load('particles-js', 'assets/particles.json', function() {
+		  console.log('callback - particles.js config loaded');
+		});
+	</script>
 </body>
 </html>
