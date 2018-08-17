@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Jura:500');
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fefefe;
+}
+
+* {
+  transition: .3s;
+  border-radius: 0 !important;
+}
+
+html {
+  background-color: #000;
+}
+
+body {
+  position: relative;
+  z-index: 0;
+  transition: .5s opacity;
+  opacity: 1;
+  font-family: 'Jura', sans-serif;
+  font-size: 110%;
+}
+
+body.fade-out {
+  transition: none;
+  opacity: 0;
+}
+
+.intro {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.on {
+  opacity: 1;
+}
+
+.scroller svg {
+  position: relative;
+  top: -150px;
+  opacity: 0;
+  color: white;
+}
+
+@-webkit-keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.woop, #shuffler {
+  opacity: 0;
+}
+
+.woop strong {
+  color: #fff;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.title:not(.is-size-0) {
+  padding-bottom: .55em;
+}
+
+.sha1 {
+  text-shadow: 1px 1px 1px rgba(0, 128, 0, 0.7), 0 0 1em black, 0 0 0.1em rgba(0, 128, 0, 0.7);
+}
+
+.media-content {
+  padding: 1.5em;
+}
+
+h2.proj {
+  margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 1088px) {
+  .is-size-0 {
+    font-size: 3rem;
+  }
+  .icons {
+    padding: 4em !important;
+  }
+}
+
+@media screen and (max-width: 1087px) {
+  .is-size-0 {
+    font-size: 2rem;
+  }
+  .is-medium, .is-large {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+}
+
+.pa {
+  padding-top: 1.7em;
+  text-align: center;
+}
+
+.box:hover {
+  box-shadow: 0 2px 3px rgba(10, 10, 10, .3), 0 0 0 1px rgba(10, 10, 10, .3);
+}
+
+img.is-me {
+  display: block;
+  width: 128px;
+  margin: 5em auto 0;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  ;
+}
+
+.soc svg {
+  margin: 1em .05em;
+  padding: 2px;
+  color: rgba(0, 0, 0, .6);
+  border-radius: 5px !important
+}
+
+.soc svg:hover {
+  padding: 0;
+}
+
+.soc svg.em:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.soc svg.gb:hover {
+  cursor: pointer;
+  color: #6e5494;
+}
+
+.soc svg.ln:hover {
+  cursor: pointer;
+  color: #0e76a8;
+}
+
+.soc svg.tr:hover {
+  cursor: pointer;
+  color: #0084b4;
+}
+
+.footer {
+  padding: 4em;
+  font-size: 80%;
+}
+
+.st {
+  text-decoration: line-through;
+}
+
+.pro h3 {
+  padding-top: 7px;
+}
