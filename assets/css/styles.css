@@ -1,242 +1,253 @@
-@import url('https://fonts.googleapis.com/css?family=Jura:500');
+@font-face {
+  font-family: 'juralight';
+  src: url('../fonts/jura-variablefont_wght-webfont.woff2') format('woff2'),
+    url('../fonts/jura-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+::selection {
+  background: pink;
+}
+
+::-moz-selection {
+  background: pink;
+}
+
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: black;
+  background: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #fefefe;
+  background: #0a0a0a;
 }
 
 * {
-  transition: .3s;
   border-radius: 0 !important;
 }
 
 html {
-  background-color: #000;
+  overflow: hidden;
+  background-color: #0a0a0a;
 }
 
 body {
-  position: relative;
-  z-index: 0;
-  transition: .5s opacity;
-  opacity: 1;
-  font-family: 'Jura', sans-serif;
-  font-size: 110%;
-}
-
-body.fade-out {
-  transition: none;
-  opacity: 0;
-}
-
-.intro {
+  font-family: 'juralight', sans-serif;
   background: url(../img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-size: 130%;
 }
 
-.on {
-  opacity: 1;
-}
-
-.scroller svg {
-  position: relative;
-  top: -150px;
-  opacity: 0;
-  color: white;
-}
-
-@-webkit-keyframes flash {
-  from, 50%, to {
-    opacity: 1;
-  }
-  25%, 75% {
-    opacity: 0;
+@media screen and (max-width: 1088px) {
+  body {
+    font-size: 100%;
   }
 }
 
-@keyframes flash {
-  from, 50%, to {
-    opacity: 1;
-  }
-  25%, 75% {
-    opacity: 0;
-  }
+.animate__delay-00 {
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
 }
 
-.flash {
-  -webkit-animation-name: flash;
-  animation-name: flash;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+.animate__delay-01 {
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
 }
 
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.animate__delay-02 {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.animate__delay-03 {
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s;
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s;
 }
 
-.fadeOut {
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+.animate__delay-04 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
-.woop, #shuffler {
-  opacity: 0;
+.animate__delay-05 {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
 
-.woop strong {
-  color: #fff;
+.animate__delay-06 {
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.animate__delay-07 {
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.animate__delay-08 {
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
 }
 
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+#fp-nav {
+  display: none;
 }
 
-.title:not(.is-size-0) {
-  padding-bottom: .55em;
-}
-
-.sha1 {
-  text-shadow: 1px 1px 1px rgba(0, 128, 0, 0.7), 0 0 1em black, 0 0 0.1em rgba(0, 128, 0, 0.7);
-}
-
-.media-content {
-  padding: 1.5em;
-}
-
-h2.proj {
-  margin-bottom: 1.5em;
+.container {
+  padding: 1rem;
 }
 
 @media screen and (min-width: 1088px) {
+  #fp-nav {
+    display: block !important;
+  }
+
   .is-size-0 {
     font-size: 3rem;
   }
+
+  .is-size-125 {
+    font-size: 1.25rem;
+  }
+
   .icons {
     padding: 4em !important;
   }
 }
 
-@media screen and (max-width: 1087px) {
-  .is-size-0 {
-    font-size: 2rem;
-  }
-  .is-medium, .is-large {
-    padding-top: 3em;
-    padding-bottom: 3em;
-  }
+.modal-content {
+  padding: 2rem;
 }
 
-.pa {
-  padding-top: 1.7em;
-  text-align: center;
+.modal-content .content {
+  max-height: 400px;
 }
 
-.box:hover {
-  box-shadow: 0 2px 3px rgba(10, 10, 10, .3), 0 0 0 1px rgba(10, 10, 10, .3);
+.modal-card{
+  overflow-y: auto;
 }
 
-img.is-me {
-  display: block;
-  width: 128px;
-  margin: 5em auto 0;
-  padding: 10px;
-  border: 1px solid lightgrey;
-  ;
+li i {
+  margin-right: 10px;
+  transition: color .3s;
+  color: #29a0af;
 }
 
-.soc svg {
-  margin: 1em .05em;
-  padding: 2px;
-  color: rgba(0, 0, 0, .6);
-  border-radius: 5px !important
+li a {
+  color: #dedede;
 }
 
-.soc svg:hover {
-  padding: 0;
+li a:hover,
+li a i:hover {
+  transition: color .3s;
 }
 
-.soc svg.em:hover {
-  cursor: pointer;
-  color: #000;
+a.project_link {
+  transition: .3s;
+  color: #dedede;
 }
 
-.soc svg.gb:hover {
-  cursor: pointer;
-  color: #6e5494;
+a.project_link:hover i {
+  transition: .3s;
+  color: #23d160;
 }
 
-.soc svg.ln:hover {
-  cursor: pointer;
+a:hover {
+  color: #fff;
+}
+
+a:hover i.gb {
+  color: #c9510c;
+}
+
+a:hover i.ln {
   color: #0e76a8;
 }
 
-.soc svg.tr:hover {
-  cursor: pointer;
+a:hover i.tr {
   color: #0084b4;
 }
 
+a:hover i.rt {
+  color: #61dbfb;
+}
+
+a:hover i.ns {
+  color: #68a063;
+}
+
+a:hover i.pn {
+  color: #edd455;
+}
+
+a:hover i.h5 {
+  color: #e34c26;
+}
+
+a:hover i.cs {
+  color: #ff8a27;
+}
+
+a:hover i.as {
+  color: #edd455;
+}
+
+a:hover i.jt {
+  color: #f0db4f;
+}
+
+a:hover i.el {
+  color: #af296d;
+}
+
 .footer {
-  padding: 4em;
   font-size: 80%;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
-.st {
-  text-decoration: line-through;
+#fp-nav li:last-of-type {
+  display: none;
 }
 
-.pro h3 {
-  padding-top: 7px;
+#modal .content {
+  overflow-y: scroll;
 }
+
+#section4 {
+  background: #0a0a0a;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/*
+THIS HELPED HERE: https://github.com/alvarotrigo/fullPage.js/issues/4288
+#fp-nav li:nth-of-type(1) {
+  display: none;
+}
+*/
